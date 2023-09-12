@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+ outline: solid rgba(240,240,240,.33);
+ border: 2px solid darkorange;
+}
+
+body {
+  background: linear-gradient(90deg, yellow, darkorange);
+}
+
+input {
+  width: 20vw;
+  height: 5vh;
+  border: none;
+  border-bottom: 2px solid darkorange;
+  border-radius: 5px;
+}
+
+.search-container {
+  position:relative;
+  margin: 0;
+  padding: 0;
+  top: 45vh;
+  left: 40vw;
+}
+.search-container input,
+.search-container .suggestions {
+  margin: auto;
+  padding: 0;
+  background-color: rgba(240,240,240,.25);
+}
+.search-container input {
+  padding-left: .5vw;
+}
+.search-container .suggestions {
+  position: absolute;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  width: 20vw;
+  height: 3vh;
+  padding-left: .5vw;
+}
+ul li:hover {
+  background-color: rgb(241, 133, 0);
+}
