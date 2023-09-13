@@ -22,8 +22,7 @@ function showSuggestions(results, inputVal) {
 
 	for (let fruit of results) {
 		let newSuggestion = document.createElement('li');
-		newSuggestion.innerHTML = fruit;
-		// newSuggestion.innerHTML = fruit.replace(inputVal, '<b>' + inputVal + '</b>');
+		newSuggestion.innerHTML = fruit.replace(new RegExp('(' + inputVal + ')', 'i'), '<b>$1</b>');
 
 		suggestions.appendChild(newSuggestion);
 
