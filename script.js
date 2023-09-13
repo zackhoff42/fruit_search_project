@@ -20,7 +20,7 @@ function search(str) {
 	results = fruit.filter((el) => el.toLowerCase().includes(str));
 
 	results.sort((a, b) => {
-		calculateScore(a, str) - calculateScore(b, str);
+		return calculateScore(a, str) - calculateScore(b, str);
 	});
 
 	return results;
