@@ -5,12 +5,17 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 function calculateScore(a, str) {
 	let total = 0;
+	str = str.toLowerCase();
+	a = a.toLowerCase();
+
 	if (a.indexOf(str) == 0) {
-		total += 1;
-	}
-	if (str.split(a).length > 1) {
 		total += 2;
 	}
+	if (str.split(a).length > 1) {
+		total += 1;
+	}
+
+	console.log(a, total);
 	return total;
 }
 
