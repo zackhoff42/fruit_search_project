@@ -11,11 +11,10 @@ function calculateScore(a, str) {
 	if (a.indexOf(str) == 0) {
 		total += 2;
 	}
-	if (str.split(a).length > 1) {
+	if (a.split(str).length > 1) {
 		total += 1;
 	}
 
-	console.log(a, total);
 	return total;
 }
 
@@ -25,7 +24,7 @@ function search(str) {
 	results = fruit.filter((el) => el.toLowerCase().includes(str));
 
 	results.sort((a, b) => {
-		return calculateScore(a, str) - calculateScore(b, str);
+		return calculateScore(b, str) - calculateScore(a, str);
 	});
 
 	return results;
